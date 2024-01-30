@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #222;
+    color: #fff;
+}
+
+.card {
+    width: min(400px, 95vw);
+    background-color: #fff;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    margin: 96px auto;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search input {
+    padding: 16px 24px;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 32px;
+    border: 0;
+    outline: none;
+    flex: 1;
+}
+
+.search button {
+    width: 52px;
+    height: 52px;
+    border: 0;
+    border-radius: 50%;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search button img {
+    width: 20px;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+.weather h1 {
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.details .col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.details .col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    margin-top: 16px;
+    margin-left: 10px;
+    font-size: 14px;
+    display: none;
+}
+
+/* https://api.openweathermap.org/data/2.5/weather?q={city%20name}&appid=bf64ec53a1f3c8f3e5151898543eaea8 */

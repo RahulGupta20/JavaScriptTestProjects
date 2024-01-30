@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .inner-container {
+            width: 50%;
+            flex: 1;
+            border: 1px solid grey;
+            margin: 10px;
+            height: 90vh;
+            background-color: pink;
+        }
+        .active {
+            width: 50%;
+            flex: 3;
+            border: 1px solid grey;
+            margin: 10px;
+            height: 90vh;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <h2>title</h2>
+        </div>
+        <div class="inner-container">
+            <h2>title</h2>
+        </div>
+        <div class="inner-container">
+            <h2>title</h2>
+        </div>
+        <div class="inner-container">
+            <h2>title</h2>
+        </div>
+        <div class="inner-container">
+            <h2>title</h2>
+        </div>
+    </div>
+
+    <script>
+        const innerContainer = document.querySelectorAll(".inner-container");
+
+        function removeActiveClasses() {
+            innerContainer.forEach(card => {
+                card.classList.remove('active')
+            })
+        }
+
+        innerContainer.forEach(function(card) {
+            card.addEventListener('click', function(e) {
+                // console.log(e.target)
+                // console.log(card)
+                removeActiveClasses();
+                card.classList.add('active')
+            })
+        })
+    </script>
+
+
+    <!-- ref: https://www.youtube.com/watch?v=_CdpR-UQsPU -->
+</body>
+</html>

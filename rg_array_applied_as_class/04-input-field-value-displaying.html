@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Guessing Game</title>
+
+</head>
+
+<body style="background-color:#212121; color:#fff;">
+
+    <div id="wrapper">
+        <form class="form">
+            <label2 for="guessField" id="guess">Guess a number</label>
+                <input type="text" id="guessField" class="guessField">
+                <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
+        </form>
+
+        <p>Previous Guesses: <span class="guesses"></span></p>
+    </div>
+
+    <script>
+        const submit = document.querySelector('#subt');
+        const userInput = document.querySelector('#guessField');
+        const guessSlot = document.querySelector('.guesses');
+
+        // let prevGuess = [];
+
+        submit.addEventListener('click', function (e) {
+            e.preventDefault();
+            const guess = userInput.value;
+            console.log(guess);
+            validateGuess(guess);
+        });
+
+        function validateGuess(guess) {
+            if(guess === '' || guess < 0) {
+                alert('PLease enter');
+            } else {
+                // prevGuess.push(guess);
+                displayGuess(guess);
+            }
+        }
+
+        function displayGuess(guess) {
+            userInput.value = '';
+
+            const li = document.createElement('li');
+            guessSlot.appendChild(li);
+            li.textContent = guess;
+        }
+    </script>
+</body>
+
+</html>

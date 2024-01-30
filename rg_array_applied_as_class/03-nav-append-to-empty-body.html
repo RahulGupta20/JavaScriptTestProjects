@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        const nav = document.createElement('nav')
+        function addMenus(menuItem) {
+            const li = document.createElement('li');
+            const liLink = document.createElement('a');
+            liLink.appendChild(document.createTextNode(menuItem));
+            li.appendChild(liLink);
+            // document.querySelector('.navbarNav').appendChild(li);
+            nav.appendChild(li);
+            
+            li.classList.add('nav-item')
+            liLink.className = 'nav-link'
+            nav.className = 'navbar'
+        }
+        addMenus("Services");
+        addMenus("Contact Us");
+
+        document.body.appendChild(nav)
+    </script>
+</body>
+</html>

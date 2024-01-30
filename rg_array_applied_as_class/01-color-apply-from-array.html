@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn Green Text</title>
+    <style>
+        /* Define your styles for the 'turngreen' class here */
+        .red {
+            background-color: #f00;
+        }
+        .green {
+            background-color: green;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+
+    <!-- <script>
+        const colors = ["red", "yellow", "blue", "green"];
+        for (let i = 0; i < colors.length; i++) {
+            console.log(colors[i])
+        }
+    </script> -->
+    <script>
+        const colors = ["red", "green", "blue", "yellow"];
+    
+        // Get all elements with class "day"
+        const days = document.querySelectorAll(".day");
+    
+        // Iterate through the days and apply colors
+        days.forEach((day, index) => {
+            // day.style.backgroundColor = colors[index];
+            day.classList.add(colors[index]);
+            // day.innerHTML = (colors[index])
+            // day.style.padding = '10px';
+            // day.style.fontSize = '20px'
+        });
+    </script>
+</body>
+</html>
