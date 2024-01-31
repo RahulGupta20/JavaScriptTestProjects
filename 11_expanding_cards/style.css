@@ -12,14 +12,26 @@
 .inner-container {
     flex: 1;
     width: 20%;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
+    border-radius: 16px;
     margin: 10px;
     background-color: white;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     filter: grayscale(1);
-    transition: flex 0.5s all ease-in-out;
+    transition: flex 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.inner-container h2 {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
 }
 
 .active {
